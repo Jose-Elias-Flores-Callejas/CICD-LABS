@@ -1,34 +1,34 @@
-name: Pipeline CI - Laboratorio 1
+name: Primer Pipeline CI
 
-# Se ejecuta cada vez que ocurre un push al repositorio
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  hello-ci:
+    name: Hello CI
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout del codigo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Informacion del repositorio
+      - name: Mostrar información del entorno
         run: |
+          echo "================================"
+          echo "      PRIMER PIPELINE CI"
+          echo "================================"
           echo "Repositorio: ${{ github.repository }}"
-          echo "Dueno del repositorio: ${{ github.repository_owner }}"
-          echo "Usuario que hizo el push: ${{ github.actor }}"
-
-      - name: Rama y commit
-        run: |
-          echo "Rama actual: ${{ github.ref_name }}"
+          echo "Rama: ${{ github.ref_name }}"
           echo "Commit: ${{ github.sha }}"
+          echo "================================"
 
-      - name: Fecha y hora
-        run: |
-          echo "Fecha y hora actual: $(date)"
+      - name: Mostrar fecha y hora
+        run: date
 
-      - name: Version de Git
-        run: |
-          git --version
+      - name: Mostrar versión de Git
+        run: git --version
 
-      - name: Mensaje de exito
-        run: |
-          echo "El pipeline finalizo con exito"
+      - name: Finalizar pipeline
+        run: echo "Pipeline ejecutado correctamente."

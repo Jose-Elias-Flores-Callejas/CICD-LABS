@@ -4,7 +4,7 @@ from app.calculator import dividir, multiplicar, restar, sumar
 
 
 def test_sumar_positivos():
-    assert sumar(2, 3) == 6
+    assert sumar(2, 3) == 5
 
 
 def test_sumar_negativos():

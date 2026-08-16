@@ -1,7 +1,9 @@
 name: Primer Pipeline CI
 
+# Se ejecuta en cada push (cualquier rama) y al crear/actualizar pull requests hacia main
 on:
   push:
+  pull_request:
     branches:
       - main
 

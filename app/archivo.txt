@@ -1,0 +1,4 @@
+Este es un archivo de texto de ejemplo dentro de la carpeta app.
+Sirve para verificar que la carpeta app existe en el repositorio.
+
+Laboratorio 1 de CI/CD

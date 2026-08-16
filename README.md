@@ -21,3 +21,10 @@ Este laboratorio agrega el flujo de trabajo colaborativo con Git:
 - Creacion de un pull request hacia `main`.
 - Ejecucion automatica del pipeline de CI al subir la rama.
 - Proteccion de la rama `main` para impedir modificaciones directas (solo mediante pull requests).
+
+## Laboratorio 3 - Pruebas unitarias automatizadas
+
+- Proyecto de ejemplo en `app/` (calculadora en Python).
+- Pruebas unitarias con `pytest` en `app/tests/`.
+- El pipeline ejecuta: compilacion (`compileall`), pruebas con cobertura y publica reportes como artefactos.
+- Quality Gate: si alguna prueba falla, el pipeline se detiene y el merge queda bloqueado.
